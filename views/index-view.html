@@ -23,7 +23,7 @@
 <div class="container" ng-repeat=' obj in mainC.apiData' >
 
 <div ng-if='obj.key=="Book"' >
-<div ng-repeat="(i,obj2) in obj.Value" ng-show="mainC.showcharkey==1">
+<div ng-repeat="(i,obj2) in obj.Value" ng-show="mainC.showbookkey==1">
 <a ng-href="index.html#!/book/{{i}}"><book-view book=obj2 index=(i+1)></book-view></a>
 </div>
 </div>

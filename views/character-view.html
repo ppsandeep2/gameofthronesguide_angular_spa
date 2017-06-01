@@ -1,13 +1,13 @@
 <br><br>
 <div class="text-center character-card" >
     <blockquote class="card-blockquote">
-<i class="fa fa-male">{{cardHeading}}</i>
-            <p>{{character.name}}<a> </a></p>
+<i class="fa fa-male">{{cardHeading}}</i><br>
+            <p ng-show="character.name.length>0"><b>{{character.name}}</b><a> </a></p>
+            <p ng-repeat="Alias in character.aliases" ng-show="character.aliases.length>0" >{{Alias}}</p> 
+      <p ng-show="character.culture.length>0">Culture: {{character.culture}}</p>
+        <cite><i ng-show="character.gender.length>0">Gender:{{character.gender}}</i></cite>
 
-      <p>Culture: {{character.culture}}</p>
-        <cite><i>Gender:{{character.gender}}</i></cite>
-
-<p style="color: grey">{{character.born}}</p>
+<p ng-show="character.born.length>0" style="color: grey">{{character.born}}</p>
 
     </blockquote>
 </div>

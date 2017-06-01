@@ -10,31 +10,75 @@
               </tr>
      </thead>
 
-<tr class="clickable-row " >
+<tr class="clickable-row " ng-show="houseC.House.seats.length>0">
 
 <td>Seats:</td>
 <td><p ng-repeat="seat in houseC.House.seats">{{seat}}</p> </td>
 </tr>
 
-<tr class="clickable-row" >
+<tr class="clickable-row " ng-show="houseC.House.titles.length>0">
+<td>Titles:</td>
+<td><p ng-repeat="seat in houseC.House.titles">{{seat}}</p> </td>
+</tr>
+
+<tr class="clickable-row" ng-show="houseC.House.coatOfArms.length>0">
 <td>Coat of Arms:</td>
 <td>{{houseC.House.coatOfArms}}</td>	
 </tr>
 
-<tr class="clickable-row" >
+<tr class="clickable-row" ng-show="houseC.House.region.length>0">
 <td>Region:</td>
 <td>{{houseC.House.region}}</td>	
 </tr>
-<tr class="clickable-row" >
+<tr class="clickable-row" ng-show="houseC.House.words.length>0" >
 <td>Words:</td>
 <td>{{houseC.House.words}}</td>	
 </tr>
 
 
-<tr class="clickable-row" >
+<tr class="clickable-row"  ng-show="houseC.House.founded.length>0">
 <td>Founded:</td>
 <td>{{houseC.House.founded}}</td>	
 </tr>
+
+<tr class="clickable-row" ng-show="houseC.House.diedOut.length>0" >
+<td>Founded:</td>
+<td>{{houseC.House.diedOut}}</td>	
+</tr>
+
+<tr class="clickable-row " ng-show="houseC.House.ancestralWeapons.length>0" >
+<td>Ancestral Weapons:</td>
+<td><p ng-repeat="ancestralWeapon in houseC.House.ancestralWeapons">{{ancestralWeapon}}</p> </td>
+</tr>
+
+<tr class="clickable-row" ng-show="houseC.House.currentLord.length>0">
+<td>Current Lord:</td>
+<td><p><a ng-href="{{houseC.House.currentLord.replace('https://anapioficeandfire.com/api/characters','index.html#!/character')}}" >
+          {{houseC.House.currentLord.replace('https://anapioficeandfire.com/api/characters/','Character - ')}}</a></p> </td>
+</tr>
+
+<tr class="clickable-row" ng-show="houseC.House.founder.length>0" >
+<td>Founder:</td>
+<td><p><a ng-href="{{houseC.House.founder.replace('https://anapioficeandfire.com/api/characters','index.html#!/character')}}" >
+          {{houseC.House.founder.replace('https://anapioficeandfire.com/api/characters/','Character - ')}}</a></p> </td>
+</tr>
+
+<tr class="clickable-row" ng-show="houseC.House.overlord.length>0" >
+<td>Overlord:</td>
+<td><p><a ng-href="{{houseC.House.overlord.replace('https://anapioficeandfire.com/api/houses','index.html#!/house')}}" >
+          {{houseC.House.overlord.replace('https://anapioficeandfire.com/api/houses/','House - ')}}</a></p> </td>
+</tr>
+
+<tr class="clickable-row"  >
+<td>Sworn Members:</td>
+<td><p><a ng-repeat="swornMember in houseC.House.swornMembers" ng-href="{{swornMember.replace('https://anapioficeandfire.com/api/characters','index.html#!/character')}}" >
+          {{swornMember.replace('https://anapioficeandfire.com/api/characters/','Character - ')}}</a></p> </td>
+</tr>
+
+
+
+
+
 
 </table>
 </blockquote>

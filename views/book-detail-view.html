@@ -45,6 +45,13 @@
 <td>Released:</td>
 <td>{{bookC.Book.released|date:dd:mm:yyyy}}</td>	
 </tr>
+
+<tr class="clickable-row" >
+<td>Pov Characters:</td>
+<td><p ng-repeat="char in bookC.Book.povCharacters"><a ng-href="{{char.replace('https://anapioficeandfire.com/api/characters','index.html#!/character')}}" >
+          {{char.replace('https://anapioficeandfire.com/api/characters/','Character - ')}}</a></p> </td>
+</tr>
+
 </table>
 </blockquote>
   

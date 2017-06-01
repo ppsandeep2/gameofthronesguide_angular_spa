@@ -1,11 +1,10 @@
-myApp.controller('houseController',['$http','$q','$routeParams','gotService',function($http,$q,$routeParams,gotService) {      
+myApp.controller('houseController',['$http','$q','$routeParams','dataService',function($http,$q,$routeParams,dataService) {      
 var main=this;
 this.House=[]; 
 this.loadData = function() {
 this.index=0;
 index=$routeParams.houseid;
-index++;
-gotService.getHouse(index).then(function successCallback(response) {
+dataService.getHouse(index).then(function successCallback(response) {
           
             main.House = response.data;
           console.log(main.House);

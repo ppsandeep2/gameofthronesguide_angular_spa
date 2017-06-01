@@ -3,11 +3,11 @@
 myApp.config(['$routeProvider', function($routeProvider){
     $routeProvider.when('/',{
             // location of the template
-        	templateUrl		: 'views/index-view.html',
-        	// Which controller it should use 
-            controller 		: 'mainController',
+            templateUrl     : 'views/index-view.html',
+            // Which controller it should use 
+            controller      : 'mainController',
             // what is the alias of that controller.
-        	controllerAs 	: 'mainC'
+            controllerAs    : 'mainC'
         })
          
        .when('/book/:bookid',{
@@ -45,5 +45,3 @@ myApp.config(['$routeProvider', function($routeProvider){
             }
         );
 }]);
-
-

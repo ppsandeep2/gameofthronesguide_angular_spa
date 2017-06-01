@@ -1,11 +1,10 @@
-myApp.controller('characterController',['$http','$q','$routeParams','gotService',function($http,$q,$routeParams,gotService) {      
+myApp.controller('characterController',['$http','$q','$routeParams','dataService',function($http,$q,$routeParams,dataService) {      
 var main=this;
 this.Character=[]; 
 this.loadData = function() {
 this.index=0;
 index=$routeParams.characterid;
-index++;
-gotService.getCharacter(index).then(function successCallback(response) {
+dataService.getCharacter(index).then(function successCallback(response) {
           
             main.Character = response.data;
           console.log(main.Character);

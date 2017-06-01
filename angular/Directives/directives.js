@@ -1,4 +1,5 @@
 myApp.directive('bookView', function() {
+  var index1=1;
  return{
  restrict: "E",
    templateUrl: "views/book-view.html",

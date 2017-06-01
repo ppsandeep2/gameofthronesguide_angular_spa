@@ -1,4 +1,4 @@
-myApp.service('gotService', function apiFactory($http) {
+myApp.service('dataService', function apiFactory($http) {
 
   var baseUrl = 'https://anapioficeandfire.com/api';
   var main=this;
@@ -6,7 +6,7 @@ myApp.service('gotService', function apiFactory($http) {
  main.getBooks = function() {
     return $http.get(baseUrl + '/books?page=1&pageSize=50');}
   main.getBook = function(bookid) {
-    return $http.get(baseUrl + '/books/' + bookid)
+    return $http.get(baseUrl + '/books/'+bookid)
 
   }  
   

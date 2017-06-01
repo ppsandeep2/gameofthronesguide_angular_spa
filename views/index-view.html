@@ -1,135 +1,117 @@
- 
-    <div class="portfolio-section" id="portfolio"><!--Portfolio Section-->
-            <div class="container">
-            
-                
-                </div>
-                 <div class="portfolio" id="portfolio">
-          
-          <ul class ="filters" >
-            <div class="col-sm-4"><li><span><a  href="" ng-click="mainC.showbooks()" id="book">Books</a></span></li></div>
-            <div class="col-sm-4"><li><span ><a href="" ng-click="mainC.showcharacters()" id="Characters">Characters</a></span></li></div>
-            <div class="col-sm-4"><li><span><a  href="" ng-click="mainC.showhouses()" id="Houses">Houses</a></span></li></div>
-        
-              </ul>
-    <!-- portfolio-section -->
-    </div>
-                              
-        <br> 
-    </div>
-
+<div class="portfolio-section" id="portfolio">
+   <!--Portfolio Section-->
+   <div class="container">
+   </div>
+   <div class="portfolio" id="portfolio">
+      <ul class ="filters" >
+         <div class="col-sm-4">
+            <li><span><a  href="" ng-click="mainC.showbooks()" id="book">Books</a></span></li>
+         </div>
+         <div class="col-sm-4">
+            <li><span ><a href="" ng-click="mainC.showcharacters()" id="Characters">Characters</a></span></li>
+         </div>
+         <div class="col-sm-4">
+            <li><span><a  href="" ng-click="mainC.showhouses()" id="Houses">Houses</a></span></li>
+         </div>
+      </ul>
+      <!-- portfolio-section -->
+   </div>
+   <br> 
+</div>
 <br><br><br>
 <div class="container" ng-show="mainC.showbooktab">
-  <div class= "row">
-   
-
- <div class="col-xs-2 text-center" >
-      <button class="btn btn-md btn-warning text-center btn-responsive " ng-click="toggle1=!toggle1"><i class="fa fa-sort text-center" aria-hidden="true"> Order By Book Name</i></button>
+   <div class= "row">
+      <div class="col-xs-2 text-center" >
+         <button class="btn btn-md btn-warning text-center btn-responsive " ng-click="toggle1=!toggle1"><i class="fa fa-sort text-center" aria-hidden="true"> Order By Book Name</i></button>
+      </div>
+      <div class="col-xs-5">
+         <input id=book ng-model=filterbook.name type="text" class="form-control" placeholder="Book" aria-label="...">
+      </div>
+      <div class="col-xs-5">
+         <input id=book ng-model=filterauthor type="text" class="form-control" placeholder="Author" aria-label="...">
+      </div>
+   </div>
 </div>
-
-     <div class="col-xs-5">
-      <input id=book ng-model=filterbook.name type="text" class="form-control" placeholder="Book" aria-label="...">
-    </div>
-    <div class="col-xs-5">
-      <input id=book ng-model=filterauthor type="text" class="form-control" placeholder="Author" aria-label="...">
-    </div>
-
-
-</div>
-  </div> 
 <div class="container" ng-show="mainC.showchartab">
-  <div class= "row">
-   
-
- <div class="col-xs-2 text-center" >
-      <button class="btn btn-md btn-warning text-center btn-responsive " ng-click="toggle2=!toggle2"><i class="fa fa-sort text-center" aria-hidden="true"> Order By Character Name</i></button>
+   <div class= "row">
+      <div class="col-xs-2 text-center" >
+         <button class="btn btn-md btn-warning text-center btn-responsive " ng-click="toggle2=!toggle2"><i class="fa fa-sort text-center" aria-hidden="true"> Order By Character Name</i></button>
+      </div>
+      <div class="col-xs-5">
+         <input id=book ng-model=filterchar.name type="text" class="form-control" placeholder="Character" aria-label="...">
+      </div>
+      <div class="col-xs-5">
+         <input id=book ng-model=filterculture.culture type="text" class="form-control" placeholder="Culture" aria-label="...">
+      </div>
+   </div>
 </div>
-
-     <div class="col-xs-5">
-      <input id=book ng-model=filterchar.name type="text" class="form-control" placeholder="Character" aria-label="...">
-    </div>
-    <div class="col-xs-5">
-      <input id=book ng-model=filterculture.culture type="text" class="form-control" placeholder="Culture" aria-label="...">
-    </div>
-
-
-</div>
-  </div>
 <div class="container" ng-show="mainC.showhousetab">
-  <div class= "row">
-   
-
- <div class="col-xs-2 text-center" >
-      <button class="btn btn-md btn-warning text-center btn-responsive " ng-click="toggle3=!toggle3"><i class="fa fa-sort text-center" aria-hidden="true"> Order By House Name</i></button>
+   <div class= "row">
+      <div class="col-xs-2 text-center" >
+         <button class="btn btn-md btn-warning text-center btn-responsive " ng-click="toggle3=!toggle3"><i class="fa fa-sort text-center" aria-hidden="true"> Order By House Name</i></button>
+      </div>
+      <div class="col-xs-5">
+         <input id=book ng-model= filterhouse.name type="text" class="form-control" placeholder="House" aria-label="...">
+      </div>
+      <div class="col-xs-5">
+         <input id=book ng-model= filterregion.region type="text" class="form-control" placeholder="Region" aria-label="...">
+      </div>
+   </div>
 </div>
-
-     <div class="col-xs-5">
-      <input id=book ng-model= filterhouse.name type="text" class="form-control" placeholder="House" aria-label="...">
-    </div>
-    <div class="col-xs-5">
-      <input id=book ng-model= filterregion.region type="text" class="form-control" placeholder="Region" aria-label="...">
-    </div>
-
-
-</div>
-  </div>
-
-
 </div><br><br>
 <!-- Would have created a new view for book,character and house but since it had to be done inside the same ng-repeat,i have used show() and hide()-Sandeep -->
 <div class="container" ng-repeat=' obj in mainC.apiData' >
-
-<div ng-if='obj.key=="Book"' >
-<div ng-repeat="(i,obj2) in obj.Value | filter:filterbook | filter:filterauthor | orderBy: !toggle1? 'name':'-name'" ng-show="mainC.showbookkey==1">
-<a ng-href="index.html#!/book/{{obj2.url.replace('https://anapioficeandfire.com/api/books/','')}}"><book-view book=obj2 index=(i+1)></book-view></a>
-</div>
-</div>
-<div ng-if='obj.key=="Character"' >
-<div ng-repeat="(j,obj3) in obj.Value | filter:filterchar | filter:filterculture | orderBy: !toggle2? 'name':'-name'" ng-show="mainC.showcharkey==1">
-<a ng-href="index.html#!/character/{{obj3.url.replace('https://anapioficeandfire.com/api/characters/','')}}"><character-view character=obj3 index=j+1></character-view></a>
-</div>
-</div>
-<div ng-if='obj.key=="House"' >
-<div ng-repeat="(k,obj4) in obj.Value | filter:filterhouse | filter:filterregion | orderBy: !toggle3? 'name':'-name'" ng-show="mainC.showhousekey==1">
-<a  ng-href="index.html#!/house/{{obj4.url.replace('https://anapioficeandfire.com/api/houses/','')}}"><house-view house=obj4 index=k+1></house-view></a>
-</div>
-</div>
-
-
-
-
+   <div ng-if='obj.key=="Book"' >
+      <div ng-repeat="(i,obj2) in obj.Value | filter:filterbook | filter:filterauthor | orderBy: !toggle1? 'name':'-name'" ng-show="mainC.showbookkey==1">
+         <a ng-href="index.html#!/book/{{obj2.url.replace('https://anapioficeandfire.com/api/books/','')}}">
+            <book-view book=obj2 index=(i+1)></book-view>
+         </a>
+      </div>
+   </div>
+   <div ng-if='obj.key=="Character"' >
+      <div ng-repeat="(j,obj3) in obj.Value | filter:filterchar | filter:filterculture | orderBy: !toggle2? 'name':'-name'" ng-show="mainC.showcharkey==1">
+         <a ng-href="index.html#!/character/{{obj3.url.replace('https://anapioficeandfire.com/api/characters/','')}}">
+            <character-view character=obj3 index=j+1></character-view>
+         </a>
+      </div>
+   </div>
+   <div ng-if='obj.key=="House"' >
+      <div ng-repeat="(k,obj4) in obj.Value | filter:filterhouse | filter:filterregion | orderBy: !toggle3? 'name':'-name'" ng-show="mainC.showhousekey==1">
+         <a  ng-href="index.html#!/house/{{obj4.url.replace('https://anapioficeandfire.com/api/houses/','')}}">
+            <house-view house=obj4 index=k+1></house-view>
+         </a>
+      </div>
+   </div>
 </div>
 <script type="text/javascript">
-  $(document).ready(function() {
-    $("#select").on("change", function() {
-        if ($(this).val() === "Book") {
-            $("#team1").show();
-
-           
-
-
-        }
-           
-            if ($(this).val() === "Team 2") {
-             $("#team2").show();
+   $(document).ready(function() {
+     $("#select").on("change", function() {
+         if ($(this).val() === "Book") {
+             $("#team1").show();
+   
             
-        }
-        if ($(this).val() === "Score 1") {
-            $("#score1").show();
+   
+   
+         }
+            
+             if ($(this).val() === "Team 2") {
+              $("#team2").show();
              
-        }
-       
-        if ($(this).val() === "Score 2") {
-            $("#score2").show();
-             
-        }
-        if ($(this).val() === "Date") {
-            $("#year").show();
-           
-    }
-})})
-
-
+         }
+         if ($(this).val() === "Score 1") {
+             $("#score1").show();
+              
+         }
+        
+         if ($(this).val() === "Score 2") {
+             $("#score2").show();
+              
+         }
+         if ($(this).val() === "Date") {
+             $("#year").show();
+            
+     }
+   })})
+   
+   
 </script>
-
-

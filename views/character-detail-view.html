@@ -1,95 +1,98 @@
 <br><br><br>
 <div class="container">
    <blockquote class="card-blockquote book-card">
-<table class="table table-hover text-center">
-    <thead ng-show="CharacterC.Character.name.length>0">
-              <tr>
-                <th colspan="2" class="text-center">
+      <table class="table table-hover text-center">
+         <thead ng-show="CharacterC.Character.name.length>0">
+            <tr>
+               <th colspan="2" class="text-center">
                   <span>{{CharacterC.Character.name}}</span>
-                </th>
-              </tr>
-     </thead>
-
-<tr class="clickable-row " ng-show="CharacterC.Character.aliases.length>0" >
-<td>Aliases:</td>
-<td><p ng-repeat="Alias in CharacterC.Character.aliases">{{Alias}}</p> </td>
-</tr>
-
-<tr class="clickable-row " ng-show="CharacterC.Character.titles.length>0">
-<td>Titles:</td>
-<td><p ng-repeat="title in CharacterC.Character.titles">{{title}}</p> </td>
-</tr>
-
-
-<tr class="clickable-row" ng-show="CharacterC.Character.allegiances.length>0" >
-<td>Allegiances:</td>
-<td><p ng-repeat="Allegiance in CharacterC.Character.allegiances"><a ng-href="{{Allegiance.replace('https://anapioficeandfire.com/api/houses','index.html#!/house')}}" >
-          {{Allegiance.replace('https://anapioficeandfire.com/api/houses/','House - ')}}</a></p> </td>
-</tr>
-
-<tr class="clickable-row" ng-show="CharacterC.Character.books.length>0" >
-<td>Books:</td>
-<td><p ng-repeat="book in CharacterC.Character.books"><a ng-href="{{book.replace('https://anapioficeandfire.com/api/books','index.html#!/book')}}" >
-          {{book.replace('https://anapioficeandfire.com/api/books/','Book - ')}}</a></p> </td>
-</tr>
-
-<tr class="clickable-row"  ng-show="CharacterC.Character.father.length>0">
-<td>Father:</td>
-<td><p><a ng-href="{{CharacterC.Character.father.replace('https://anapioficeandfire.com/api/characters','index.html#!/character')}}" >
-          {{CharacterC.Character.father.replace('https://anapioficeandfire.com/api/characters/','Character - ')}}</a></p> </td>
-</tr>
-
-<tr class="clickable-row" ng-show="CharacterC.Character.mother.length>0" >
-<td>Mother:</td>
-<td><p><a ng-href="{{CharacterC.Character.mother.replace('https://anapioficeandfire.com/api/characters','index.html#!/character')}}" >
-          {{CharacterC.Character.mother.replace('https://anapioficeandfire.com/api/characters/','Character - ')}}</a></p> </td>
-</tr>
-
-<tr class="clickable-row" ng-show="CharacterC.Character.spouse.length>0" >
-<td>Father:</td>
-<td><p><a ng-href="{{CharacterC.Character.spouse.replace('https://anapioficeandfire.com/api/characters','index.html#!/character')}}" >
-          {{CharacterC.Character.spouse.replace('https://anapioficeandfire.com/api/characters/','Character - ')}}</a></p> </td>
-</tr>
-
-<tr class="clickable-row" ng-show="CharacterC.Character.culture.length>0" >
-<td>Culture:</td>
-<td>{{CharacterC.Character.culture}}</td>	
-</tr>
-
-<tr class="clickable-row" ng-show="CharacterC.Character.gender.length>0">
-<td>Gender:</td>
-<td>{{CharacterC.Character.gender}}</td>	
-</tr>
-
-
-
-<tr class="clickable-row"  ng-show="CharacterC.Character.povBooks.length>0">
-<td>Pov Books:</td>
-<td><p ng-repeat="book in CharacterC.Character.povBooks"><a ng-href="{{book.replace('https://anapioficeandfire.com/api/books','index.html#!/book')}}" >
-          {{Allegiance.replace('https://anapioficeandfire.com/api/books/','Book - ')}}</a></p> </td>
-</tr>
-
-
-
-<tr class="clickable-row" ng-show="CharacterC.Character.born.length>0">
-<td>Born:</td>
-<td>{{CharacterC.Character.born|date:dd:mm:yyyy}}</td>	
-</tr>
-<tr class="clickable-row" ng-show="CharacterC.Character.died.length>0" >
-<td>Died:</td>
-<td>{{CharacterC.Character.died|date:dd:mm:yyyy}}</td>	
-</tr>
- 
-<tr class="clickable-row " ng-show="CharacterC.Character.playedBy.length>0" >
-<td>Played by:</td>
-<td><p ng-repeat="actor in CharacterC.Character.playedBy">{{actor}}</p> </td>
-</tr> 
-
-</table>
-</blockquote>
-
-
-<div class="text-center row"><button class=" btn  text-center"><a href="index.html#!/">Go Home</a></button></div>
-  </div>
-
+               </th>
+            </tr>
+         </thead>
+         <tr class="clickable-row " ng-show="CharacterC.Character.aliases.length>0" >
+            <td>Aliases:</td>
+            <td>
+               <p ng-repeat="Alias in CharacterC.Character.aliases">{{Alias}}</p>
+            </td>
+         </tr>
+         <tr class="clickable-row " ng-show="CharacterC.Character.titles.length>0">
+            <td>Titles:</td>
+            <td>
+               <p ng-repeat="title in CharacterC.Character.titles">{{title}}</p>
+            </td>
+         </tr>
+         <tr class="clickable-row" ng-show="CharacterC.Character.allegiances.length>0" >
+            <td>Allegiances:</td>
+            <td>
+               <p ng-repeat="Allegiance in CharacterC.Character.allegiances"><a ng-href="{{Allegiance.replace('https://anapioficeandfire.com/api/houses','index.html#!/house')}}" >
+                  {{Allegiance.replace('https://anapioficeandfire.com/api/houses/','House - ')}}</a>
+               </p>
+            </td>
+         </tr>
+         <tr class="clickable-row" ng-show="CharacterC.Character.books.length>0" >
+            <td>Books:</td>
+            <td>
+               <p ng-repeat="book in CharacterC.Character.books"><a ng-href="{{book.replace('https://anapioficeandfire.com/api/books','index.html#!/book')}}" >
+                  {{book.replace('https://anapioficeandfire.com/api/books/','Book - ')}}</a>
+               </p>
+            </td>
+         </tr>
+         <tr class="clickable-row"  ng-show="CharacterC.Character.father.length>0">
+            <td>Father:</td>
+            <td>
+               <p><a ng-href="{{CharacterC.Character.father.replace('https://anapioficeandfire.com/api/characters','index.html#!/character')}}" >
+                  {{CharacterC.Character.father.replace('https://anapioficeandfire.com/api/characters/','Character - ')}}</a>
+               </p>
+            </td>
+         </tr>
+         <tr class="clickable-row" ng-show="CharacterC.Character.mother.length>0" >
+            <td>Mother:</td>
+            <td>
+               <p><a ng-href="{{CharacterC.Character.mother.replace('https://anapioficeandfire.com/api/characters','index.html#!/character')}}" >
+                  {{CharacterC.Character.mother.replace('https://anapioficeandfire.com/api/characters/','Character - ')}}</a>
+               </p>
+            </td>
+         </tr>
+         <tr class="clickable-row" ng-show="CharacterC.Character.spouse.length>0" >
+            <td>Father:</td>
+            <td>
+               <p><a ng-href="{{CharacterC.Character.spouse.replace('https://anapioficeandfire.com/api/characters','index.html#!/character')}}" >
+                  {{CharacterC.Character.spouse.replace('https://anapioficeandfire.com/api/characters/','Character - ')}}</a>
+               </p>
+            </td>
+         </tr>
+         <tr class="clickable-row" ng-show="CharacterC.Character.culture.length>0" >
+            <td>Culture:</td>
+            <td>{{CharacterC.Character.culture}}</td>
+         </tr>
+         <tr class="clickable-row" ng-show="CharacterC.Character.gender.length>0">
+            <td>Gender:</td>
+            <td>{{CharacterC.Character.gender}}</td>
+         </tr>
+         <tr class="clickable-row"  ng-show="CharacterC.Character.povBooks.length>0">
+            <td>Pov Books:</td>
+            <td>
+               <p ng-repeat="book in CharacterC.Character.povBooks"><a ng-href="{{book.replace('https://anapioficeandfire.com/api/books','index.html#!/book')}}" >
+                  {{Allegiance.replace('https://anapioficeandfire.com/api/books/','Book - ')}}</a>
+               </p>
+            </td>
+         </tr>
+         <tr class="clickable-row" ng-show="CharacterC.Character.born.length>0">
+            <td>Born:</td>
+            <td>{{CharacterC.Character.born|date:dd:mm:yyyy}}</td>
+         </tr>
+         <tr class="clickable-row" ng-show="CharacterC.Character.died.length>0" >
+            <td>Died:</td>
+            <td>{{CharacterC.Character.died|date:dd:mm:yyyy}}</td>
+         </tr>
+         <tr class="clickable-row " ng-show="CharacterC.Character.playedBy.length>0" >
+            <td>Played by:</td>
+            <td>
+               <p ng-repeat="actor in CharacterC.Character.playedBy">{{actor}}</p>
+            </td>
+         </tr>
+      </table>
+   </blockquote>
+   <div class="text-center row"><button class=" btn  text-center"><a href="index.html#!/">Go Home</a></button></div>
+</div>
 <br>

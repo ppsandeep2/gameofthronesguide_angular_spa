@@ -1,7 +1,7 @@
 myApp.directive('bookView', function() {
  return{
  restrict: "E",
-   templateUrl: "views/book-View.html",
+   templateUrl: "views/book-view.html",
 
 scope:{
 

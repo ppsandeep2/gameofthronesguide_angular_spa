@@ -1,0 +1,14 @@
+<div class=" text-center book-card">
+ 
+    <blockquote class="card-blockquote">
+<i class="fa fa-book" aria-hidden="true">{{cardHeading}}</i>
+      <p >{{book.name}}</p>
+        <cite><i>Written By</i></cite>
+
+      <p ng-repeat="author in book.authors">{{author}}</p>
+
+<p  style="color: grey">{{book.released| date:'yyyy'}}</p>
+
+    </blockquote>
+  
+</div>

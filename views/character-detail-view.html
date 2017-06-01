@@ -1,0 +1,45 @@
+<br><br><br>
+<div class="container" >
+   <blockquote class="card-blockquote book-card">
+<table class="table table-hover text-center">
+    <thead>
+              <tr>
+                <th colspan="2" class="text-center">
+                  <span>{{CharacterC.Character.name}}</span>
+                </th>
+              </tr>
+     </thead>
+
+<tr class="clickable-row " >
+
+<td>Aliases:</td>
+<td><p ng-repeat="Alias in CharacterC.Character.aliases">{{Alias}}</p> </td>
+</tr>
+
+<tr class="clickable-row" >
+<td>Culture:</td>
+<td>{{CharacterC.Character.culture}}</td>	
+</tr>
+
+<tr class="clickable-row" >
+<td>Gender:</td>
+<td>{{CharacterC.Character.gender}}</td>	
+</tr>
+
+
+
+<tr class="clickable-row" >
+<td>Born:</td>
+<td>{{CharacterC.Character.born|date:dd:mm:yyyy}}</td>	
+</tr>
+<tr class="clickable-row" >
+<td>Died:</td>
+<td>{{CharacterC.Character.died|date:dd:mm:yyyy}}</td>	
+</tr>
+</table>
+</blockquote>
+  
+<div class="text-center row"><button class=" btn  text-center"><a href="index.html#!/">Go Back</a></button></div>
+  </div>
+
+<br>

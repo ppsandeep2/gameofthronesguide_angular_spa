@@ -1,0 +1,54 @@
+<br><br><br>
+<div class="container" >
+   <blockquote class="card-blockquote book-card">
+<table class="table table-hover text-center">
+    <thead>
+              <tr>
+                <th colspan="2" class="text-center">
+                  <span>{{bookC.Book.name}}</span>
+                </th>
+              </tr>
+     </thead>
+
+<tr class="clickable-row " >
+
+<td>Authors:</td>
+<td><p ng-repeat="author in bookC.Book.authors">{{author}}</p> </td>
+</tr>
+
+<tr class="clickable-row" >
+<td>Pages:</td>
+<td>{{bookC.Book.numberOfPages}}</td>	
+</tr>
+
+<tr class="clickable-row" >
+<td>Publisher:</td>
+<td>{{bookC.Book.publisher}}</td>	
+</tr>
+
+<tr class="clickable-row" >
+<td>ISBN:</td>
+<td>{{bookC.Book.isbn}}</td>	
+</tr>
+
+<tr class="clickable-row" >
+<td>Type:</td>
+<td>{{bookC.Book.mediaType}}</td>	
+</tr>
+
+<tr class="clickable-row" >
+<td>Country:</td>
+<td>{{bookC.Book.country}}</td>	
+</tr>
+
+<tr class="clickable-row" >
+<td>Released:</td>
+<td>{{bookC.Book.released|date:dd:mm:yyyy}}</td>	
+</tr>
+</table>
+</blockquote>
+  
+<div class="text-center row"><button class=" btn  text-center"><a href="index.html#!/">Go Back</a></button></div>
+  </div>
+
+<br>

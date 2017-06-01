@@ -1,0 +1,47 @@
+ 
+    <div class="portfolio-section" id="portfolio"><!--Portfolio Section-->
+            <div class="container">
+            
+                
+                </div>
+                 <div class="portfolio" id="portfolio">
+          
+          <ul class ="filters" >
+            <div class="col-sm-4"><li><span><a  href="" ng-click="mainC.showbooks()" id="book">Books</a></span></li></div>
+            <div class="col-sm-4"><li><span ><a href="" ng-click="mainC.showcharacters()" id="Characters">Characters</a></span></li></div>
+            <div class="col-sm-4"><li><span><a  href="" ng-click="mainC.showhouses()" id="Houses">Houses</a></span></li></div>
+        
+              </ul>
+    <!-- portfolio-section -->
+    </div>
+                              
+          
+    </div><
+<br><br>
+
+
+<div class="container" ng-repeat=' obj in mainC.apiData' >
+
+<div ng-if='obj.key=="Book"' >
+<div ng-repeat="(i,obj2) in obj.Value" ng-show="mainC.showbookkey==1">
+<a ng-href="index.html#!/book/{{i}}"><book-view book=obj2 index=i+1></book-view></a>
+</div>
+</div>
+<div ng-if='obj.key=="Character"' >
+<div ng-repeat="(j,obj3) in obj.Value" ng-show="mainC.showcharkey==1">
+<a ng-href="index.html#!/character/{{j}}"><character-view character=obj3 index=j+1></character-view></a>
+</div>
+</div>
+<div ng-if='obj.key=="House"' >
+<div ng-repeat="(k,obj4) in obj.Value" ng-show="mainC.showhousekey==1">
+<a  ng-href="index.html#!/house/{{k}}"><house-view house=obj4 index=k+1></house-view></a>
+</div>
+</div>
+
+
+
+
+</div>
+
+
+

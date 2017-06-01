@@ -1,0 +1,156 @@
+
+<!DOCTYPE HTML>
+<html ng-app="gameofthronesApp">
+<head>
+<title>Game Of Thrones</title>
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+<script src="https://use.fontawesome.com/97dab79e8d.js"></script>
+
+
+
+</head>
+ 
+
+<body><!--Body start-->
+	<div class="header" id="head">
+		<div class="header-top">
+				<div class="container">
+			<div class="logo">
+				<a href="index.html"><img src="images/logo.png"></a>
+				</div>
+				<div class=" top-menu">
+					<span class="menu"> </span>
+					<!--Menu-->
+				<ul>
+					<li><a href="#home" class="active scroll" >Home</a></li>
+						<li><a   href=#portfolio class="scroll">Books</a></li>
+						 	<li><a   href=#portfolio class="scroll">Characters</a></li>
+								 <li><a href=#portfolio class="scroll">Houses</a></li>
+								 	 	
+						</ul>
+						<!--End Menu-->
+					</div>
+					 <!--script-nav-->
+		 
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+					<div class="heading text-center "><br><br><br><br><br><br><h3><span>Game Of Thrones</span><h3><h3>The Complete Guide</h3></div> 					
+									<div class="portfolio-header text-center" style="color: white">
+                
+                <h6>All the information below is collected from <span><a href="https://anapioficeandfire.com" style="color:#FAC832">anapioficeandfire.com</a></span></h6> <br><br><img height="200em" width="200em" src="images/icon.png"> 
+
+</div>
+					</div>
+					</div>
+
+</div> <!--End Slider Section-->
+
+
+				
+		
+					
+							
+	 <br><br>
+			<div ng-view><h1></h1></div>	
+<!-- End portfolio-section  -->
+</div>
+
+					
+			<div class="footer-section">
+								<div class="container">
+									
+<div class="slider"> <!--Slider Section-->
+	 <div class="container">
+		   <div class="callbacks_container">
+			  
+			  <ul class="rslides" id="slider">
+				 
+				 <li>	          
+					 <h3>“A mind needs books as a sword needs a whetstone, if it is to <span>keep its edge</span>.” </h3>
+					<p>George R.R. Martin, A Game of Thrones</p>          
+				 </li>
+				 <li>	          
+					<h3>“<span>Winter</span> is coming.”</h3>  
+					<p>George R.R. Martin, A Game of Thrones</p>          
+				 </li>
+				 <li>	          
+					 <h3>“Some old wounds never truly heal, and bleed again at the <span>slightest word</span>. </h3>
+					 <p>George R.R. Martin, A Game of Thrones</p>  	          
+				 </li>
+			  </ul>
+		  
+		  </div>
+	  </div>
+</div>
+									<div class="footer-top">
+
+									<p> Designed by <a href="http://ppsandeep2.github.io" target="target_blank">Sandeep Pattathil</a></p>
+								</div>
+					
+				<a class="scroll" href="#head" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+
+
+				</div>
+
+	</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-route.js"></script>
+    <script src="angular/app.js"></script>
+    <script src="angular/routes.js"></script>
+        <script src="angular/Directives/directives.js"></script>
+
+       <script src="angular/Services/services.js"></script>
+      <script src="angular/Controllers/mainController.js"></script>
+      <script src="angular/Controllers/bookController.js"></script>
+        <script src="angular/Controllers/characterController.js"></script>
+        <script src="angular/Controllers/houseController.js"></script>
+
+
+
+  
+
+
+
+<!-- start-smoth-scrolling-->
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js"></script>
+ <script type="text/javascript">
+		jQuery(document).ready(function($) {
+			$(".scroll").click(function(event){		
+				event.preventDefault();
+				$('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
+			});
+		});
+	</script>
+<!---End-smoth-scrolling-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ResponsiveSlides.js/1.55/responsiveslides.js"></script>
+ <script>
+    $(function () {
+      $("#slider").responsiveSlides({
+      	auto: true,
+      	nav: true,
+      	speed: 500,
+        namespace: "callbacks",
+        pager: true,
+      });
+    });
+  
+
+
+  </script>
+
+
+    
+      
+
+
+
+
+</html> 
+	

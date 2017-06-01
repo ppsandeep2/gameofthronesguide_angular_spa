@@ -1,0 +1,426 @@
+/*--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+--*/
+
+
+
+h1,h2,h3,h4,h5,h6{
+	padding:0 0;
+	margin:0 0;
+}
+p{
+	padding:0 0;
+	margin:0 0;
+}
+ul{
+	padding:0 0;
+	margin:0 0;	
+}
+body{
+  background-color: #1a1a1a;
+	padding:0 0;
+	margin:0 0; 
+	font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-color:white;
+
+}
+.heading h3{
+  font-family: 'Montserrat', sans-serif;
+  color: #fff;
+  font-size: 4em;
+
+
+
+  font-weight: 700;
+  text-transform:uppercase;
+    line-height: 1.2em;
+}
+.heading h3 span {
+  color: #fac832;
+}
+.header{
+	background: url("../images/banner.jpg") no-repeat ;
+background-repeat:no-repeat;
+-webkit-background-size:cover;
+-moz-background-size:cover;
+-o-background-size:cover;
+background-size:cover;
+background-position:center;
+    background-attachment: fixed;
+    max-height:  670px;
+
+}
+.header-top {
+  padding: 6em 0;
+
+ }
+.logo{
+	float: left;
+}
+.logo a {
+  display: block;
+}
+.top-menu{
+	float: right;
+	  margin-top: 0.5em;
+}
+.top-menu ul li{
+	display: inline-block;
+	padding-top: 0.5em;
+}
+.top-menu ul li a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 1em;
+  font-size: 1.4em;
+  text-transform: capitalize;
+
+}
+.top-menu ul li a.active {
+  color: #fac832;
+}
+
+.top-menu ul li a:hover{
+	 color: #fac832;
+}
+.book-card{
+
+  background-color: #FAC832;
+}
+
+a:hover .book-card{
+
+color: black;
+  background-color: #FFFFFF;
+
+}
+a:focus .book-card{
+
+color: black;
+  background-color: #FFFFFF;
+
+}
+
+
+.character-card{
+
+  background-color: #E6E5E0;
+}
+
+a:hover .character-card{
+
+color: black;
+  background-color: #FAC832;
+
+}
+a:focus .character-card{
+
+color: black;
+  background-color: #FAC832;
+
+}
+.house-card{
+
+  background-color: #C7C0B1;
+}
+
+a:hover .house-card{
+
+color: black;
+  background-color: #FFFFFF;
+
+}
+a:focus .house-card{
+
+color: black;
+  background-color: #FFFFFF;
+
+}
+
+
+h3{
+  color: white;
+
+}
+
+
+/*Slider*/
+
+.slider {
+	position: relative;
+	text-align: center;
+	
+}
+.rslides {
+  position: relative;
+  list-style: none;
+  overflow: hidden;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  }
+.rslides h3{
+  font-family: 'Montserrat', sans-serif;
+	color: #fff;
+  font-size: 3em;
+  width: 73%;
+  margin: 3em auto 0;
+  font-weight: 700;
+  text-transform:uppercase;
+    line-height: 1.2em;
+}
+.rslides h3 span {
+  color: #fac832;
+}
+.rslides p{
+  color: #fff;
+  font-size: 2.2em;
+  font-weight: 300;
+  text-align: center;
+  }
+.rslides li {
+  -webkit-backface-visibility: hidden;
+  position: absolute;
+  display: none;
+  width: 100%;
+  left: 0;
+  top: 0;
+  }
+.rslides li:first-child {
+  position: relative;
+  display: block;
+  float: left;
+  }
+.callbacks_tabs a:after {
+	content: "\f111";
+	font-size: 0;
+	font-family: FontAwesome;
+	visibility: visible;
+	display: block;
+	height: 8px;
+	width: 8px;
+	display: inline-block;
+	border: 2px solid #fff;
+	border-radius:50%;
+	background:#fff;
+}
+.callbacks_here a:after{
+	border: 2px solid #FFF;
+	background:transparent;
+}
+.callbacks_tabs a{
+	visibility:hidden;
+}
+.callbacks_tabs li{
+	display:inline-block;
+}
+ul.callbacks_tabs.callbacks1_tabs {
+	position: absolute;
+	bottom: 29px;
+	z-index: 999;
+	left: 46%;
+	display: none;
+}
+.callbacks_nav {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  top: 73%;
+	left: 15%;
+  opacity: 1;
+  z-index: 3;
+  text-indent: -9999px;
+  overflow: hidden;
+  text-decoration: none;
+  height: 61px;
+  width: 38px;
+  background: transparent url("../images/gif.png") no-repeat 0px 0px;
+  margin-top: -45px;
+  }
+.callbacks_nav.next {
+  left: auto;
+  background-position: right top;
+  right: 15%;
+ }
+
+
+
+/*Footer*/
+.footer-section{
+
+	text-align: center;
+	background: #1a1a1a;
+}
+.footer-top p {
+  font-size: 17px;
+  color: #d5d6d7;
+  font-weight: 400;
+}
+.footer-top a {
+	font-size: 19px;
+	color: #f0c514;
+	font-weight: 400;
+	text-transform: capitalize;
+}
+.footer-top a:hover {
+	color: #d5d6d7;
+}
+
+.portfolio-header{
+  margin: 0 auto;
+}
+.portfolio-header h3 {
+  font-size: 2.5em;
+  color: white;
+  margin-bottom: 0.1em;
+  font-weight: 600;
+}
+.portfolio-header span {
+  color: #fac832;
+  font-size: 1.3em;
+  font-weight: 600;
+}
+.portfolio-header p{
+  font-size: 1.3em;
+  color: #464646;
+ }
+/*-- portfolio --*/
+.portfolio-section{
+  padding-top:5em;
+}
+#portfoliolist .portfolio {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  width: 25%;
+  display:none;
+  float:left;
+  overflow:hidden;
+  margin: 0;
+}
+div#portfoliolist {
+  padding: 0px 0px;
+  margin:4em 0em;
+} 
+.portfolio-wrapper {
+  overflow:hidden;
+  position: relative !important;
+  cursor:pointer;
+  margin:0em 0em;
+  padding:0em 0em;
+}
+.portfolio img {
+  width:100%;
+  transition: all 300ms!important;
+  -webkit-transition: all 300ms!important;
+  -moz-transition: all 300ms!important;
+}
+.portfolio .label {
+  position: absolute;
+  width: 100%;
+  height:40px;
+  bottom:-40px;
+}
+.portfolio .label-bg {
+  background: #22B4B8;
+  width: 100%;
+  height:100%;
+  position: absolute;
+  top:0;
+  left:0;
+}
+.portfolio .label-text {
+  color:#fff;
+  position: relative;
+  z-index:500;
+  padding:5px 8px;
+}
+.portfolio .text-category {
+  display:block;
+  font-size:9px;
+  font-size: 12px;
+  text-transform:uppercase;
+}
+
+.filters {
+  margin: 3% 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+.filters li a{
+  display: block;
+  padding: 8px 30px;
+  text-decoration: none;
+  color: #464646;
+  cursor: pointer;
+  font-size: 1.5em;
+  text-transform:uppercase;
+  font-weight: 400; 
+  margin: 0 0.1em;
+}
+.filters li a:hover{
+  color: #fac832;
+  font-weight: 600;
+  border: 1px solid #fac832;
+}
+.filters a:focus{
+  color: #fac832;
+  font-weight: 600;
+  border: 1px solid #fac832;
+} 
+
+
+
+      
+.filters li {
+  display: -webkit-inline-box;
+} 
+.container:after { content: "\0020"; display: block; height: 0; clear: both; visibility: hidden; }
+.clearfix:before,
+.clearfix:after,
+.row:before,
+.row:after {
+  content: '\0020';
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0; 
+}
+.row:after,
+.clearfix:after {
+  clear: both; 
+}
+.clear {
+  clear: both;
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+@media screen and (max-width: 800px) {
+
+.heading h3{
+
+  font-size: 3em;}
+.rslides h3{
+
+    font-size: 2em;
+
+}
+.rslides p{
+
+    font-size: 1.5em;
+
+}
+.top-menu {
+
+  display: none;
+}
+
+
+}

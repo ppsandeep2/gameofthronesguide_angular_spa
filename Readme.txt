@@ -6,3 +6,4 @@ Variable maxcharpage can be changed to 30 for all characters
 -custom directive for each book,character and house view
 -Would have created a new view for book,character and house
  but since it had to be done inside the same ng-repeat,i have used show() and hide()
+-hosted on https://ppsandeep2.github.io/gameofthronesguide_angular_spa/index.html#!/
